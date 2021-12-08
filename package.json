@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "body-parse": "^0.1.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.13.0"
+  },
+  "name": "hw11",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "hosein jalili",
+  "license": "ISC",
+  "description": ""
+}
