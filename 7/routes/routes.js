@@ -1,16 +1,17 @@
 const express = require("express");
 const router = express.Router();
 const path = require("path");
-const bodyParser = require("body-parser");
 const fs = require("fs");
+// const bodyParser = require("body-parser");
 
-router.use(bodyParser.urlencoded({ extended: false }));
-router.use(bodyParser.json());
+// body parser
+router.use(express.urlencoded({ extended: true }));
+router.use(express.json());
 
 var json = fs.readFileSync("7/json/data.json", "utf8");
 json = JSON.parse(json);
 
-router.get("/", (req, res) => {
+router.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname, "../views/login.html"));
 });
 

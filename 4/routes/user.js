@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const bodyParser = require("body-parser");
 const path = require("path");
 const fs = require("fs");
+// const bodyParser = require("body-parser");
 
-router.use(bodyParser.urlencoded({ extended: false }));
-router.use(bodyParser.json());
+router.use(express.urlencoded({ extended: true }));
+router.use(express.json());
 
 var json = fs.readFileSync("4/json/data.json", "utf8");
 json = JSON.parse(json);
