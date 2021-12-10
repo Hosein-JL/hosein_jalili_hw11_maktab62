@@ -10,7 +10,7 @@ router.use(bodyParser.json());
 var json = fs.readFileSync("7/json/data.json", "utf8");
 json = JSON.parse(json);
 
-router.get("/login", (req, res) => {
+router.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../views/login.html"));
 });
 
