@@ -15,7 +15,10 @@ router.get("/", (req, res) => {
 });
 
 router.post("/login", (req, res) => {
-  let user = json.find((user) => user.uid === Number(req.body.uid));
+  let user = json.find(
+    (user) =>
+      user.uid === Number(req.body.uid) && user.firstName === req.body.firstName
+  );
   if (!user) {
     res.status(404).send(`کاربری با این مشخصات وجود ندارد.`);
   } else {
